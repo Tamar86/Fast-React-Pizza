@@ -1,3 +1,6 @@
+//The UserName component is a simple React component that uses the useSelector hook
+// from react - redux to access the userName from the Redux store.
+
 import { useSelector } from 'react-redux';
 
 function UserName() {

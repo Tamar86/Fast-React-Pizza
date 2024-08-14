@@ -1,3 +1,11 @@
+/**Imports:
+1. React Router Modules:
+ createBrowserRouter and RouterProvider are imported from react-router-dom
+ to create and provide routing functionality.
+2. Components:
+Several components are imported: Home, Menu, Cart, CreateOrder, Order, AppLayout, and Error.
+Some components have associated loaders (menuLoader, orderLoader) and actions (createOrderAction,
+ updateOrderAction), which are used to handle data fetching and form submissions. */
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './ui/Home';
 import Menu, { loader as menuLoader } from './features/menu/Menu';
@@ -6,6 +14,7 @@ import CreateOrder, {
   action as createOrderAction,
 } from './features/order/CreateOrder';
 import Order, { loader as orderLoader } from './features/order/Order';
+import { action as updateOrderAction } from './features/order/UpdateOrder';
 import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
 
@@ -32,6 +41,7 @@ const router = createBrowserRouter([
         element: <Order />,
         loader: orderLoader,
         errorElement: <Error />,
+        action: updateOrderAction,
       },
     ],
   },

@@ -1,3 +1,6 @@
+/*The CreateUser component is designed to capture a user's name, update it in the Redux store,
+ and then navigate the user to the /menu route upon submission. */
+
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
